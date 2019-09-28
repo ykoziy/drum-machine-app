@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "../assets/stylesheets/App.css";
 
 import Header from "../containers/Header.js";
-import DrumMachine from "./DrumMachine.js"
+import DrumMachine from "./DrumMachine.js";
+import ControlPanel from "./ControlPanel.js"
 
 class App extends Component {
   render() {
@@ -16,9 +17,9 @@ class App extends Component {
                 </div>
             }
             right={
-                <div>
+                <ControlPanel>
                 Right
-                </div>
+                </ControlPanel>
             }
         />
       </div>

@@ -79,3 +79,12 @@
   box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.7);
   border-radius: 5px;
 }
+
+.control-panel {
+  display: grid;
+  padding: 0.5rem;
+  grid-gap: 0.5rem;
+  grid-template-columns: minmax(100px, 1fr);
+  justify-items: center;
+  align-items: center;
+}
