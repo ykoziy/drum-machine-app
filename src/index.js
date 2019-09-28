@@ -9,7 +9,12 @@ import rootReducer from './reducers';
 
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(rootReducer);
+const initialState = {
+  power: true,
+  volumeVal: 0.5
+};
+
+const store = createStore(rootReducer, initialState);
 
 render(
     <Provider store={store}>
