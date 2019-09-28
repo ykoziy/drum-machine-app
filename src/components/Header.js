@@ -1,6 +1,8 @@
 import React from "react";
+import { connect } from 'react-redux'
+import { switchPower } from '../actions'
 
-const Header = (props) => {
+const Header = ({power, switchPower}) => {
     return(
         <div id="head">
             <div id="head-text">
@@ -8,8 +10,8 @@ const Header = (props) => {
             </div>
             <div id="pwr-btn-container">
                 <button id="pwr-btn"
-                    className={props.powerState ? "on" : null}
-                    onClick={props.switchPower}
+                    className={power ? "on" : null}
+                    onClick={switchPower}
                 >
                     <i className="far fa-dot-circle"/>
                 </button>
@@ -18,4 +20,15 @@ const Header = (props) => {
     );
 }
 
-export default Header
+const mapStateToProps = (state) => ({
+    power: state.power
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  switchPower: () => dispatch(switchPower())
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Header);
