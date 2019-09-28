@@ -15,7 +15,7 @@ class App extends Component {
         <DrumMachine
             left={
                 <div className="button-panel">
-                Buttons goes here.
+                Buttons go here.
                 </div>
             }
             right={
