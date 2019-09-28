@@ -11,7 +11,9 @@ import * as serviceWorker from './serviceWorker';
 
 const initialState = {
   power: true,
-  volumeVal: 0.5
+  volumeVal: 0.5,
+  padName: "",
+  bankName: "Hip Hop Kit"
 };
 
 const store = createStore(rootReducer, initialState);
