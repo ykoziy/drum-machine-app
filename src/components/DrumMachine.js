@@ -2,7 +2,7 @@ import React from "react";
 
 const DrumMachine = (props) => {
   return(
-    <div id="drum-machine">
+    <div className="drum-machine">
         {props.left}
         {props.right}
     </div>
