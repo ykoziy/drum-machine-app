@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import '../assets/stylesheets/App.css';
+import "../assets/stylesheets/App.css";
+
+import Header from "./Header.js";
+import DrumMachine from "./DrumMachine.js"
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="drum-container">
       </div>
     );
   }
