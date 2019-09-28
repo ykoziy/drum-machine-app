@@ -4,6 +4,7 @@ import "../assets/stylesheets/App.css";
 import Header from "../containers/Header.js";
 import DrumMachine from "./DrumMachine.js";
 import ControlPanel from "./ControlPanel.js"
+import Screen from "../containers/Screen.js"
 
 class App extends Component {
   render() {
@@ -18,7 +19,9 @@ class App extends Component {
             }
             right={
                 <ControlPanel>
-                Right
+                    <Screen/>
+                    <div>1</div>
+                    <div>2</div>
                 </ControlPanel>
             }
         />
