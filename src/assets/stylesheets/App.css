@@ -126,10 +126,6 @@
   color: #43cbfd;
 }
 
-.drum-pad:disabled {
-    color: lightgray;
-}
-
 .screen {
   display: grid;
   grid-template-columns: 1fr 1fr;
