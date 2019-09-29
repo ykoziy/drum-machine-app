@@ -9,7 +9,10 @@ class Button extends Component {
     }
 
     handleClick = (event) => {
-        console.log('W.I.P');
+        let audio = event.currentTarget.querySelector('audio');
+        audio.volume = this.props.volume;
+        audio.currentTime = 0;
+        audio.play();
         this.props.onClick(event.target.id);
     }
 
