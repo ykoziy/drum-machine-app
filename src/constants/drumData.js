@@ -50,7 +50,7 @@ export const DRUM_KIT_ONE = [
 ];
 
 // 80s Drums
-const DRUM_KIT_TWO = [
+export const DRUM_KIT_TWO = [
     {
         key: "Q",
         title: "Beat Drum 1",
