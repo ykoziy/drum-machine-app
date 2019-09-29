@@ -8,6 +8,11 @@ class Button extends Component {
         };
     }
 
+    handleClick = (event) => {
+        console.log('W.I.P');
+        this.props.onClick(event.target.id);
+    }
+
     render() {
         const {text, soundName, url, power} = this.props;
         let drumPadClass = `drum-pad ${this.state.padClass}`;
@@ -17,6 +22,7 @@ class Button extends Component {
                 disabled={isDisabled}
                 className={drumPadClass}
                 id={soundName}
+                onClick={(e) => this.handleClick(e)}
             >
                 <audio className="clip" id={text} src={url}></audio>
                 {text}
