@@ -6,6 +6,7 @@ import DrumMachine from "./DrumMachine.js";
 import ButtonPanel from "../containers/ButtonPanel.js";
 import ControlPanel from "./ControlPanel.js";
 import Screen from "../containers/Screen.js";
+import BankSliderSwitch from "../containers/BankSliderSwitch.js";
 import VolumeBar from "../containers/VolumeBar.js";
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
             right={
                 <ControlPanel>
                     <Screen/>
-                    <div>Bank switch goes here.</div>
+                    <BankSliderSwitch/>
                     <VolumeBar/>
                 </ControlPanel>
             }
