@@ -1,4 +1,4 @@
-import { SWITCH_POWER, ADJUST_VOLUME, PRESS_PAD } from "../constants/actionTypes";
+import { SWITCH_POWER, ADJUST_VOLUME, PRESS_PAD, SWITCH_BANK } from "../constants/actionTypes";
 
 export default (state, action) => {
   switch(action.type) {
@@ -7,7 +7,9 @@ export default (state, action) => {
     case ADJUST_VOLUME:
       return {...state, volumeVal: action.volume/100};
     case PRESS_PAD:
-      return {...state, padName: action.padName}
+      return {...state, padName: action.padName};
+    case SWITCH_BANK:
+      return {...state, bankName: action.bankName};
     default:
       return state;
   }
