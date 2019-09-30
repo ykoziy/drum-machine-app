@@ -9,7 +9,7 @@ export default (state, action) => {
     case PRESS_PAD:
       return {...state, padName: action.padName};
     case SWITCH_BANK:
-      return {...state, bankName: action.bankName};
+      return {...state, bankName: action.bankName, padName: ""};
     default:
       return state;
   }
