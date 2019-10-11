@@ -9,10 +9,9 @@ html, body {
 }
 
 body {
-  background: #40b3c2;
+  background: $body-bg;
   background-image: linear-gradient(to bottom , rgba(255,255,255,1) 0%,rgba(255,255,255,0) 87%), linear-gradient(to left bottom, #40b3c2 0%, #eb9eeb 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100%;
-  font-family: sans-serif;
+  font-family: $main-font-family;
 }

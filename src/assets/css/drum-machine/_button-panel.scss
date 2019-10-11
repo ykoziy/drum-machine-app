@@ -7,30 +7,19 @@
 }
 
 .drum-pad {
-  font-size: 16px;
+  font-size: $btn-font-size;
+  font-family: $other-font-famiy;
   font-weight: bold;
   text-decoration: none;
-  background-color: #A3A9AD;
-  background: linear-gradient(to bottom, #BDBDBD 0%, #959A9E 49%, #959A9E 100%);
-  border: 1px solid #5C5C5C;
-  outline: none;
-  cursor: pointer;
-  border-radius: 8px;
-  text-shadow:0px 1px 0px #ededed;
-  box-shadow: 0px 1px 0px 0px #1c1b18;
-  font-family: 'Audiowide', cursive;
+  background-color: $btn-bg;
+  @include btn-style(8px);
+  text-shadow: 0px 1px 0px #ededed;
 }
 
 .drum-pad:active {
-  background-color: #AAB0B5;
-  background: linear-gradient(to bottom, #959A9E 0%, #BDBDBD 49%, #BDBDBD 100%);
-  box-shadow: inset 1px 1px 5px 2px rgba(20, 20, 20, 0.3);
-  color: #43cbfd;
+  @include pad-btn-active-style;
 }
 
 .active {
-  background-color: #AAB0B5;
-  background: linear-gradient(to bottom, #959A9E 0%, #BDBDBD 49%, #BDBDBD 100%);
-  box-shadow: inset 1px 1px 5px 2px rgba(20, 20, 20, 0.3);
-  color: #43cbfd;
+  @include pad-btn-active-style;
 }

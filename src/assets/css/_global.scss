@@ -1,0 +1,38 @@
+// Colors
+$body-bg: #eaf3f8;
+$drum-cointainer-bg: #b4b8b9;
+$btn-bg: #A3A9AD;
+$slider-bg: #d3d3d3;
+$screen-bg: #509bd3;
+
+$btn-fg-active: #43cbfd;
+$btn-fg-inactive: #3A3A3A;
+
+// Fonts
+$main-font-family: sans-serif;
+$other-font-famiy: 'Audiowide', cursive;
+$btn-font-size: 16px;
+$volume-font-size: 25px;
+
+
+// Other
+@mixin btn-style($border-r: 0) {
+  border: 1px solid #5C5C5C;
+  outline: none;
+  cursor: pointer;
+  border-radius: $border-r;
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+  background: linear-gradient(to bottom, #BDBDBD 0%, #959A9E 49%, #959A9E 100%);
+}
+
+@mixin pwr-btn-active-style {
+  background: linear-gradient(to bottom, #959A9E 0%, #BDBDBD 49%, #BDBDBD 100%);
+  box-shadow: inset 1px 1px 5px 2px rgba(20, 20, 20, 0.3);
+  text-shadow: 0px 0px 3px #43cbfd;
+}
+
+@mixin pad-btn-active-style {
+  background: linear-gradient(to bottom, #959A9E 0%, #BDBDBD 49%, #BDBDBD 100%);
+  box-shadow: inset 1px 1px 5px 2px rgba(20, 20, 20, 0.3);
+  color: $btn-fg-active;
+}
