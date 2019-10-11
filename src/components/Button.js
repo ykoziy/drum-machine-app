@@ -10,10 +10,44 @@ class Button extends Component {
 
     handleClick = (event) => {
         let audio = event.currentTarget.querySelector('audio');
+        this.playAudio(audio);
+        this.props.onClick(event.target.id);
+        console.log(event.target.id);
+    }
+
+    playAudio(audio) {
         audio.volume = this.props.volume;
         audio.currentTime = 0;
         audio.play();
-        this.props.onClick(event.target.id);
+    }
+
+    switchButtonState() {
+        (this.state.padClass === "") ? this.setState({padClass: "active"}) : this.setState({padClass: ""}) ;
+    }
+
+    pressDrumPad() {
+        if (this.props.power) {
+            this.switchButtonState();
+            setTimeout(() => this.switchButtonState(), 100);
+        }
+    }
+
+    handleKeyPress = (event) => {
+      const {text, power, soundName} = this.props;
+      if(text.toLowerCase() === event.key.toLowerCase() && power) {
+        let audio = document.getElementById(text);
+        this.playAudio(audio);
+        this.pressDrumPad();
+        this.props.onClick(soundName);
+      }
+    }
+
+    componentDidMount() {
+       document.addEventListener('keydown', this.handleKeyPress);
+    }
+
+    componentWillUnmount() {
+      document.removeEventListener('keydown', this.handleKeyPress);
     }
 
     render() {
