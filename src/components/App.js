@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../assets/css/App.css";
 
 import Header from "../containers/Header.js";
 import DrumMachine from "./DrumMachine.js";
