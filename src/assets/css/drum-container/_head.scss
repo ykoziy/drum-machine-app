@@ -4,7 +4,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
-  background-color: $drum-cointainer-bg;
+  background-color: map-nested-get($color, "primary");
   max-width: 800px;
   min-width: 300px;
   width: 80%;
