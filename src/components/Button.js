@@ -12,7 +12,6 @@ class Button extends Component {
         let audio = event.currentTarget.querySelector('audio');
         this.playAudio(audio);
         this.props.onClick(event.target.id);
-        console.log(event.target.id);
     }
 
     playAudio(audio) {
