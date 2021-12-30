@@ -1,0 +1,23 @@
+.pwr-btn-container {
+  justify-self: end;
+  .pwr-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
+    background-color: map-nested-get($color, "darker");
+    color: map-nested-get($color, "text", "inactive");
+    @include btn-style(50%);
+
+    &:active {
+      @include pwr-btn-active-style;
+    }
+
+    &.on {
+      @include pwr-btn-active-style;
+    }
+
+    i {
+      vertical-align: -5%;
+    }
+  }
+}
